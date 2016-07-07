@@ -1,2 +1,2 @@
-# dominon-web
-http://team-dominion.com/
+# dominion-web
+http://teamdominion.jp/

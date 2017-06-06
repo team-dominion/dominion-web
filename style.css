@@ -34,6 +34,7 @@ body {
 /* side nav */
 nav.side-nav {
   display: block;
+  display: none;
 }
 nav.side-nav ul {
   width: 100px;

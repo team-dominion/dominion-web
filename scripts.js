@@ -21,18 +21,23 @@ $(function() {
 
     //change sidemenu to active
     $('nav.side-nav li').children('img').attr('src', "./img/sidenav.png");
+    $('nav.side-nav li').children('a').hide();
 
     if (scrollTop <= homeHeight - 100) {
       $('nav.side-nav li').eq(0).children('img').attr('src', "./img/sidenav-active.png");
+      $('nav.side-nav li').eq(0).children('a').show();
     }
     else if (scrollTop <= homeHeight + aboutHeight) {
       $('nav.side-nav li').eq(1).children('img').attr('src', "./img/sidenav-active.png");
+      $('nav.side-nav li').eq(1).children('a').show();
     }
     else if (scrollTop <= homeHeight + aboutHeight + worksHeight) {
       $('nav.side-nav li').eq(2).children('img').attr('src', "./img/sidenav-active.png");
+      $('nav.side-nav li').eq(2).children('a').show();
     }
     else {
       $('nav.side-nav li').eq(3).children('img').attr('src', "./img/sidenav-active.png");
+      $('nav.side-nav li').eq(3).children('a').show();
     }
 
   });

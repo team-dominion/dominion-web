@@ -31,6 +31,39 @@ body {
   vertical-align: middle;
 }
 
+/* side nav */
+nav.side-nav {
+  display: block;
+}
+nav.side-nav ul {
+  width: 100px;
+  margin-right: 20px;
+  list-style: none;
+}
+nav.side-nav li {
+  text-align: right;
+  overflow: hidden;
+  display: block;
+}
+nav.side-nav li a {
+  width: 70px;
+  height: 60px;
+  color: #000000;
+  line-height: 60px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  float: left;
+}
+nav.side-nav li img {
+  width: 20px;
+  height: 60px;
+  margin-left: 10px;
+  display: block;
+  overflow: hidden;
+  float: right;
+}
+
 /* header */
 header {
   width: 100%;
@@ -40,22 +73,22 @@ header {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
 }
-nav ul {
+header nav ul {
   margin: 0 30px 0 0;
   float: right;
   line-height: 80px;
   list-style: none;
   float: right;
 }
-nav li {
+header nav li {
   margin: 0 0 0 10px;
   display: inline-block;
 }
-nav li.active {
+header nav li.active {
   color: #ffffff;
   background-color: #000000;
 }
-nav img {
+header nav img {
   width: 80px;
   margin: 0;
   padding: 0;
@@ -63,8 +96,8 @@ nav img {
 }
 
 /* text */
-nav a,
-nav a:visited {
+header nav a,
+header nav a:visited {
   color: #000000;
   text-decoration: none;
 }
@@ -150,11 +183,13 @@ input[type="email"],
 input[type="text"],
 textarea {
   width: 100%;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 20px;
   border: #aaaaaa 1px solid;
   border-radius: 2px;
   box-sizing: border-box;
   box-shadow: none;
+  background-color: #ffffff;
   display: block;
 }
 

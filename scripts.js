@@ -2,41 +2,85 @@ $(function() {
 
   init();
 
-  $(window).bind("resize", function() {
-    var winWidth = $(window).width();
-    var winHeihgt = $(window).height();
+  $(window).bind('resize', function() {
+    arrange();
+  });
 
-    $('.vide').css({
-      'width': winWidth,
-      'height': winHeihgt,
-      'overflow': 'hidden'
-    });
+  $(window).scroll(function(e) {
+    var scrollTop = $(window).scrollTop();
+    var homeHeight = $('.vide').height();
+    var aboutHeight = $('#about').height();
+    var worksHeight = $('#works').height();
 
-    // $('section').css({
-    //     'min-height': winHeihgt
-    // });
+    //show sidemenu
+    if (scrollTop >= homeHeight / 2) {
+      $('.side-nav').fadeIn(800);
+    } else {
+      $('.side-nav').fadeOut(800);
+    }
+
+    //change sidemenu to active
+    $('nav.side-nav li').children('img').attr('src', "./img/sidenav.png");
+
+    if (scrollTop <= homeHeight - 100) {
+      $('nav.side-nav li').eq(0).children('img').attr('src', "./img/sidenav-active.png");
+    }
+    else if (scrollTop <= homeHeight + aboutHeight) {
+      $('nav.side-nav li').eq(1).children('img').attr('src', "./img/sidenav-active.png");
+    }
+    else if (scrollTop <= homeHeight + aboutHeight + worksHeight) {
+      $('nav.side-nav li').eq(2).children('img').attr('src', "./img/sidenav-active.png");
+    }
+    else {
+      $('nav.side-nav li').eq(3).children('img').attr('src', "./img/sidenav-active.png");
+    }
 
   });
 
-})
+  $('a[href^="#"]').click(function() {
+   var speed = 400;
+   var href= $(this).attr("href");
+   var target = $(href == "#" || href == "" ? 'html' : href);
+   var position = target.offset().top;
+
+   $('body,html').animate({scrollTop:position}, speed, 'swing');
+
+   return false;
+   });
+
+});
 
 function init() {
+  arrange();
   vide();
+
+  // append sidenav image
+  $('nav.side-nav li').append('<img src="./img/sidenav.png">');
 }
 
 function vide() {
+  $('.vide').vide('img/teamDominion_720p.mp4', {
+    posterType: 'jpg',
+    position: '50% 50%',
+    loop: false
+  });
+}
+
+function arrange() {
   var winWidth = $(window).width();
   var winHeihgt = $(window).height();
 
+  // vide
   $('.vide').css({
     'width': winWidth,
     'height': winHeihgt,
     'overflow': 'hidden'
   });
 
-  $('.vide').vide("img/teamDominion_720p.mp4", {
-    posterType: 'jpg',
-    position: '50% 50%',
-    loop: false
+  // side nav
+  $('.side-nav').css({
+    'position': 'fixed',
+    'top': (winHeihgt - $('.side-nav').height()) / 2,
+    'right': 0
   });
 }

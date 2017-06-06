@@ -2,23 +2,104 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>チームどみにおん</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./jquery.vide.js"></script>
+  <script src="./scripts.js"></script>
 </head>
-<body data-vide-bg="mp4: img/teamDominion_720p" data-vide-options="posterType: jpg, loop: false">
+<body>
+
+  <div class="vide"></div>
+
+  <!-- nav var -->
   <header>
     <nav>
       <ul>
-        <li><a href="works.html">WORKS</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
   </header>
-  <!-- <footer>
+
+  <!-- content -->
+  <section id="about">
+    <h1>About</h1>
+    <p>
+      チームどみにおんは、2016年に名古屋で結成したチームです。<br>
+      <br>
+      プロモーションビデオやモーショングラフィックスなどの映像コンテンツを中心に、ポスタやフライヤー、Webなど、いろいろなコンテンツを制作しています。
+    </p>
+    <p>Twitter: <a href="https://twitter.com/teamdominionjp">@teamdominionjp</a></p>
+  </section>
+  <section id="works">
+    <h1>Works</h1>
+    <div class="works">
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+
+    </div>
+  </section>
+  <div class="clear"></div>
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>
+      チームどみにおんへのお問い合わせは、下記よりお願いいたします。<br>
+      <a href="./commition.html" target="_blank" style="color: #555555">制作のご依頼について</a><br>
+      <br>
+    </p>
+
+    <!-- form -->
+    <form action="http://mailthis.to/teamdominion" method="post">
+      <input type="hidden" name="_subject" value="Contact from website">
+      <input type="text" name="_honey" value="" style="display:none">
+      <input type="hidden" name="_after" value="http://teamdominion.jp/thanks.html">
+      <input type="hidden" name="_valid[email]" value="required|valid_email">
+      <input type="hidden" name="_valid[name]" value="required">
+      <input type="hidden" name="_valid[message]" value="required">
+
+      <div>
+        <label for="email">Email Address:
+        <input type="email" name="email" id="email" />
+      </div>
+      <br>
+      <div>
+        <label for="name">Your Name:
+        <input type="text" name="name" id="name" />
+      </div>
+      <br>
+      <div>
+        <label for="message">Message:</label>
+        <br>
+        <textarea cols="40" rows="8" name="message"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Contact Us" />
+      </div>
+    </form>
+  </section>
+  <footer>
     <p>©2017 <a href="http://teamdominion.jp/">teamDominion</a></p>
-  </footer> -->
+  </footer>
 </body>
 </html>

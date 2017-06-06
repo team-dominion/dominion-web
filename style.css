@@ -9,13 +9,10 @@
   font-weight: bold;
 }
 
+/* general */
 html,
 body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   margin: 0;
-  /*background-color: #e9e9e9;*/
   font-family: "mpulus";
   font-weight: normal;
 }
@@ -34,8 +31,12 @@ body {
   vertical-align: middle;
 }
 
+/* header */
 header {
   width: 100%;
+  position: absolute;
+    top: 0;
+    right: 0;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
 }
@@ -60,20 +61,16 @@ nav img {
   padding: 0;
   float: left;
 }
-nav a {
+
+/* text */
+nav a,
+nav a:visited {
   color: #000000;
   text-decoration: none;
 }
 
-
-article {
-  width: 60%;
-  max-width: 700px;
-  margin: 0 auto;
-}
 h1 {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
@@ -81,35 +78,99 @@ h1 {
 p {
 
 }
-a {
+a,
+a:visited {
   color: #0000ff;
 }
+
+section {
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 0 150px 0;
+  overflow: hidden;
+}
+@media (max-width: 767px){
+  section {
+    width: 85%;
+  }
+}
+
+/* contents */
 .works {
-  width: 100%;
+  margin: -2%;
 }
 .work {
-  width: 100%;
+  width: 46%;
+  margin-bottom: 50px;
+  padding: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: left;
+}
+@media (max-width: 767px){
+  .work {
+    width: 100%;
+    float: none;
+  }
 }
 .work h2 {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+}
+.work p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .work img {
-  width: 50%;
+  width: 100%;
   display: block;
-  float: left;
 }
 .work .caption {
-  width: 45%;
-  float: right;
+  width: 100%;
 }
 
 footer {
   width: 100%;
-  margin-top: 80px;
+  margin-bottom: 40px;
   text-align: center;
   clear: both;
 }
 footer a {
   color: #000000;
+}
+
+/* form */
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  line-height: 30px;
+  border: #aaaaaa 1px solid;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: none;
+  display: block;
+}
+
+textarea {
+  height: 250px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 40px;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 2px;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
 }

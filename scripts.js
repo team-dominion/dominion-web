@@ -1,3 +1,5 @@
+var isSmartphone = false;
+
 $(function() {
 
   init();
@@ -13,7 +15,7 @@ $(function() {
     var worksHeight = $('#works').height();
 
     //show sidemenu
-    if (scrollTop >= homeHeight / 2) {
+    if (scrollTop >= homeHeight / 2 && isSmartphone == false) {
       $('.side-nav').fadeIn(800);
     } else {
       $('.side-nav').fadeOut(800);
@@ -74,6 +76,13 @@ function vide() {
 function arrange() {
   var winWidth = $(window).width();
   var winHeihgt = $(window).height();
+
+  // is Smartphone?
+  if ($(window).width() < 700) {
+    isSmartphone = true;
+  } else {
+    isSmartphone = false;
+  }
 
   // vide
   $('.vide').css({

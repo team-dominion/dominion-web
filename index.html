@@ -1,38 +1,117 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>チームどみにおん</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-  <style>
-    @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-    html {height: 100%; overflow: hidden;}
-    body {font-family: 'Noto Sans Japanese', serif; font-weight: 100; background: linear-gradient(#050b1a 0%,#0f224d 100%);}
-    p {color: #cccccc};
-    a {color:#337ab7;}
-    a:hover {color:#337ab7; text-decoration: none;};
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./jquery.vide.js"></script>
+  <script src="./scripts.js"></script>
 </head>
-<body style="height: 100%;">
-  <div class="container" style="height: 200px; margin-top: 364px;">
-    <h1 class="team-dominion text-center" style="color: rgb(204, 204, 204); margin-right: -5px; font-size: 40px; letter-spacing: 5px; display: none;">チームどみにおん</h1>
-    <p class="contact text-center" style="margin-top: 40px; font-size: 20px; display: none;">
-      <a href="http://github.com/teamdominion">works</a> / <a href="mailto:contact@teamdominion.jp">contact us</a>
+<body>
+
+  <div class="vide"></div>
+
+  <!-- side nav -->
+  <nav class="side-nav">
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- nav var -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- content -->
+  <section id="about">
+    <h1>About</h1>
+    <p>
+      チームどみにおんは、2016年に名古屋で結成したチームです。<br>
+      <br>
+      プロモーションビデオやモーショングラフィックスなどの映像コンテンツを中心に、ポスタやフライヤー、Webなど、いろいろなコンテンツを制作しています。
     </p>
-  </div>
-  <!--Scripts-->
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(window).load(function(){
-      var windowHeight = $(window).height();
-      var containerHeight = $('.container').height();
-      $('.container').css('margin-top', windowHeight / 2 - containerHeight / 2);
-      $('h1').fadeIn(1000);
-      $('p').delay(200).fadeIn(1000);
-    });
-  </script>
+    <p>Twitter: <a href="https://twitter.com/teamdominionjp">@teamdominionjp</a></p>
+  </section>
+  <section id="works">
+    <h1>Works</h1>
+    <div class="works">
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+      <div class="work">
+        <div class="caption">
+          <h2>teamDominion web</h2>
+          <p class="creator">Kengo Ito</p>
+        </div>
+        <img src="./img/works/1.png">
+      </div>
+
+    </div>
+  </section>
+  <div class="clear"></div>
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>
+      チームどみにおんへのお問い合わせは、下記よりお願いいたします。<br>
+      <a href="./commition.html" target="_blank" style="color: #555555">制作のご依頼について</a><br>
+      <br>
+    </p>
+
+    <form action="http://mailthis.to/teamdominion" method="post">
+      <input type="hidden" name="_subject" value="Contact from website">
+      <input type="text" name="_honey" value="" style="display:none">
+      <input type="hidden" name="_after" value="http://teamdominion.jp/thanks.html">
+      <input type="hidden" name="_valid[email]" value="required|valid_email">
+      <input type="hidden" name="_valid[name]" value="required">
+      <input type="hidden" name="_valid[message]" value="required">
+
+      <div>
+        <label for="email">Email Address:
+        <input type="email" name="email" id="email" />
+      </div>
+      <br>
+      <div>
+        <label for="name">Your Name:
+        <input type="text" name="name" id="name" />
+      </div>
+      <br>
+      <div>
+        <label for="message">Message:</label>
+        <br>
+        <textarea cols="40" rows="8" name="message"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Contact Us" />
+      </div>
+    </form>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p>©2017 <a href="http://teamdominion.jp/">teamDominion</a></p>
+  </footer>
 </body>
 </html>

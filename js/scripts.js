@@ -104,6 +104,6 @@ function arrange() {
 
   // matchHeight
   $(function() {
-    $('#work .caption h2').matchHeight();
+    $('#works .caption h2').matchHeight();
   });
 }

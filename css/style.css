@@ -1,11 +1,11 @@
 @font-face {
   font-family: "mpulus";
-  src: url("./font/rounded-l-mplus-20150529/rounded-l-mplus-1c-regular.ttf");
+  src: url("../font/rounded-l-mplus-20150529/rounded-l-mplus-1c-regular.ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "mpulus";
-  src: url("./font/rounded-l-mplus-20150529/rounded-l-mplus-1c-bold.ttf");
+  src: url("../font/rounded-l-mplus-20150529/rounded-l-mplus-1c-bold.ttf");
   font-weight: bold;
 }
 

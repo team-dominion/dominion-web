@@ -101,4 +101,9 @@ function arrange() {
     'top': (winHeihgt - $('.side-nav').height()) / 2,
     'right': 0
   });
+
+  // matchHeight
+  $(function() {
+    $('#work .caption h2').matchHeight();
+  });
 }

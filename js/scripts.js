@@ -67,9 +67,9 @@ function init() {
 
 function vide() {
   $('.vide').vide({
-      mp4: 'img/teamDominion_720p.mp4',
       ogv: 'img/teamDominion_720p.ogv',
       webm: 'img/teamDominion_720p.webm',
+      mp4: 'img/teamDominion_720p.mp4',
     }, {
     posterType: 'jpg',
     position: '50% 50%',

@@ -1,19 +1,8 @@
-@font-face {
-  font-family: "mpulus";
-  src: url("../font/rounded-l-mplus-20150529/rounded-l-mplus-1c-regular.ttf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "mpulus";
-  src: url("../font/rounded-l-mplus-20150529/rounded-l-mplus-1c-bold.ttf");
-  font-weight: bold;
-}
-
 /* general */
 html,
 body {
   margin: 0;
-  font-family: "mpulus";
+  font-family: "Rounded Mplus 1c";
   font-weight: normal;
 }
 .clear {
